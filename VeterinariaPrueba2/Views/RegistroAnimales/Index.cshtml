@@ -1,18 +1,21 @@
 ﻿@model IEnumerable<VeterinariaPrueba2.Models.RegistroAnimales>
 
 @{
-    ViewBag.Title = "Index";
+    <link rel="stylesheet" href="~/Content/Site.css" />
+    ViewBag.Title = "Registro de mascotas";
 }
 
-<h2>Registro de mascotas</h2>
-
-<p>
-    @Html.ActionLink("Create New", "Create")
+<h1><img src="~/Content/img/animal.png"/> Registro de mascotas</h1>
+<br />
+<p class="btn btn-success">
+    @Html.ActionLink("Crear nuevo", "Create")
 </p>
-<table class="table">
+<br />
+<br />
+<table class="table table-striped" style="background-color:#8C8C8C">
     <tr>
         <th>
-            @Html.DisplayNameFor(model => model.tblRegistroDueño.Nombre)
+            Nombre del dueño
         </th>
         <th>
             @Html.DisplayNameFor(model => model.ClaseAnimal)
@@ -35,35 +38,43 @@
         <th></th>
     </tr>
 
-@foreach (var item in Model) {
-    <tr>
-        <td>
-            @Html.DisplayFor(modelItem => item.tblRegistroDueño.Nombre)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.ClaseAnimal)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.Raza)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.Edad)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.Color)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.Estatura)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.FechaCita)
-        </td>
-        <td>
-            @Html.ActionLink("Edit", "Edit", new { id=item.Id }) |
-            @Html.ActionLink("Details", "Details", new { id=item.Id }) |
-            @Html.ActionLink("Delete", "Delete", new { id=item.Id })
-        </td>
-    </tr>
-}
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.tblRegistroDueño.Nombre)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.ClaseAnimal)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Raza)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Edad)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Color)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Estatura)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.FechaCita)
+            </td>
+            <td>
+                <div class="btn btn-warning">
+                    @Html.ActionLink("Edit", "Edit", new { id = item.Id })
+                </div>
+                <div class="btn btn-warning">
+                    @Html.ActionLink("Details", "Details", new { id = item.Id })
+                </div>
+                <div class="btn btn-danger">
+                    @Html.ActionLink("Delete", "Delete", new { id = item.Id })
+                </div>
+
+            </td>
+        </tr>
+    }
 
 </table>

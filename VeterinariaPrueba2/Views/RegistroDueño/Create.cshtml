@@ -1,18 +1,17 @@
 ﻿@model VeterinariaPrueba2.Models.RegistroDueño
 
 @{
-    ViewBag.Title = "Create";
+    ViewBag.Title = "Crear";
 }
 
-<h2>Create</h2>
-
-
+<h2>Crear registro para un nuevo dueño</h2>
+<br />
 @using (Html.BeginForm()) 
 {
     @Html.AntiForgeryToken()
     
 <div class="form-horizontal">
-    <h4>RegistroDueño</h4>
+    <h4 style="color:orangered">Por favor ingrese todos los datos solicitados</h4>
     <hr />
     @Html.ValidationSummary(true, "", new { @class = "text-danger" })
 
@@ -23,9 +22,6 @@
             @Html.ValidationMessageFor(model => model.tblRegistroPersonalId, "", new { @class = "text-danger" })
         </div>
     </div>
-
-    
-
     <div class="form-group">
         @Html.LabelFor(model => model.Nombre, htmlAttributes: new { @class = "control-label col-md-2" })
         <div class="col-md-10">
@@ -33,7 +29,6 @@
             @Html.ValidationMessageFor(model => model.Nombre, "", new { @class = "text-danger" })
         </div>
     </div>
-
     <div class="form-group">
         @Html.LabelFor(model => model.Calle, htmlAttributes: new { @class = "control-label col-md-2" })
         <div class="col-md-10">
@@ -41,7 +36,6 @@
             @Html.ValidationMessageFor(model => model.Calle, "", new { @class = "text-danger" })
         </div>
     </div>
-
     <div class="form-group">
         @Html.LabelFor(model => model.Ciudad, htmlAttributes: new { @class = "control-label col-md-2" })
         <div class="col-md-10">
@@ -57,16 +51,14 @@
             @Html.ValidationMessageFor(model => model.Telefono, "", new { @class = "text-danger" })
         </div>
     </div>
-
     <div class="form-group">
         <div class="col-md-offset-2 col-md-10">
-            <input type="submit" value="Create" class="btn btn-default" />
+            <input type="submit" value="Crear" class="btn btn-success" />
         </div>
     </div>
 </div>
 }
-
-<div>
+<div class="btn" style="background-color:cornflowerblue">
     @Html.ActionLink("Back to List", "Index")
 </div>
 

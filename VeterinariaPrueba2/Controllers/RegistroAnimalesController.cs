@@ -29,7 +29,7 @@ namespace VeterinariaPrueba2.Controllers
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
                 //linea 1
-            RegistroAnimales registroAnimales = db.Animales.Where(e => e.Id == id).Include(d => d.tblRegistroPersonal).Include(d => d.tblRegistroDueño).FirstOrDefault();
+            RegistroAnimales registroAnimales = db.Animales.Where(e => e.Id == id).Include(d => d.tblRegistroDueño).FirstOrDefault();
             if (registroAnimales == null)
             {
                 return HttpNotFound();

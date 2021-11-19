@@ -1,17 +1,20 @@
 ﻿@model VeterinariaPrueba2.Models.RegistroDueño
 
 @{
-    ViewBag.Title = "Details";
+    <link rel="stylesheet" href="~/Content/Site.css" />
+    ViewBag.Title = "Detalles";
 }
 
-<h2>Details</h2>
+<h2>Detalles del dueño</h2>
 
 <div>
-    <h4>RegistroDueño</h4>
+    <h4 style="color:orangered">Detalles de los datos registrados del dueño de la mascota</h4>
     <hr />
     <dl class="dl-horizontal">
-        
 
+        <dt>
+            Nombre del doctor
+        </dt>
         <dd>
             @Html.DisplayFor(model => model.tblRegistroPersonal.Nombre)
         </dd>
@@ -51,6 +54,14 @@
     </dl>
 </div>
 <p>
-    @Html.ActionLink("Edit", "Edit", new { id = Model.Id }) |
-    @Html.ActionLink("Back to List", "Index")
+    ¿Desea editar este registro?
+    <div class="btn btn-warning">
+        @Html.ActionLink("Editar", "Edit", new { id = Model.Id })
+    </div>
+    <br />
+    <br />
+    <div class="btn" style="background-color:cornflowerblue;">
+        @Html.ActionLink("Regresar", "Index")
+    </div>
+
 </p>

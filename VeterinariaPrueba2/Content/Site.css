@@ -2,7 +2,26 @@
     padding-top: 50px;
     padding-bottom: 20px;
 }
-
+a:link, a:visited, a:active {
+    text-decoration: none;
+    color: white;
+}
+img {
+    padding-bottom: 8px;
+    width: 40px;
+    height: 47px;
+}
+.azul{
+    background-color: #003F5D;
+}
+.gris {
+    font-weight: 600;
+    border-color: white;
+    background-color: #666666;
+}
+.gris2 {
+    font-weight: 600;
+}
 /* Set padding to keep content from hitting the edges */
 .body-content {
     padding-left: 15px;

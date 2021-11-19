@@ -134,6 +134,11 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\202111180501058_nuevaDireccion.cs" />
+    <Compile Include="Migrations\202111180501058_nuevaDireccion.designer.cs">
+      <DependentUpon>202111180501058_nuevaDireccion.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\RegistroAnimales.cs" />
     <Compile Include="Models\RegistroDueño.cs" />
     <Compile Include="Models\RegistroPersonal.cs" />
@@ -145,6 +150,16 @@
     <Content Include="Content\bootstrap-theme.min.css" />
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
+    <Content Include="Content\img\animal.png" />
+    <Content Include="Content\img\cirugia.png" />
+    <Content Include="Content\img\consulta.png" />
+    <Content Include="Content\img\dueño.png" />
+    <Content Include="Content\img\fondo-crear.png" />
+    <Content Include="Content\img\fondo2.jpg" />
+    <Content Include="Content\img\fondo3.jpg" />
+    <Content Include="Content\img\fondo4.jpg" />
+    <Content Include="Content\img\medicina-preventiva.png" />
+    <Content Include="Content\img\veterinario.png" />
     <Content Include="favicon.ico" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
@@ -162,7 +177,9 @@
     <Content Include="Scripts\jquery.validate.unobtrusive.js" />
     <Content Include="Scripts\jquery.validate.unobtrusive.min.js" />
     <Content Include="Scripts\modernizr-2.8.3.js" />
-    <Content Include="Web.config" />
+    <Content Include="Web.config">
+      <SubType>Designer</SubType>
+    </Content>
     <Content Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </Content>
@@ -209,6 +226,11 @@
     <None Include="packages.config" />
     <Content Include="Scripts\jquery-3.3.1.slim.min.map" />
     <Content Include="Scripts\jquery-3.3.1.min.map" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Migrations\202111180501058_nuevaDireccion.resx">
+      <DependentUpon>202111180501058_nuevaDireccion.cs</DependentUpon>
+    </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

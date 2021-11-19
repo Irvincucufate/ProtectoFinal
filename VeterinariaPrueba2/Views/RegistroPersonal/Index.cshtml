@@ -1,15 +1,17 @@
 ﻿@model IEnumerable<VeterinariaPrueba2.Models.RegistroPersonal>
 
 @{
-    ViewBag.Title = "Index";
+    ViewBag.Title = "Registro de médicos";
 }
 
-<h2>Registro de Doctores</h2>
-
-<p>
-    @Html.ActionLink("Create New", "Create")
+<h1><img src="~/Content/img/veterinario.png" />Registro de Doctores</h1>
+<br />
+<p class="btn btn-success">
+    @Html.ActionLink("Crear nuevo", "Create")
 </p>
-<table class="table">
+<br />
+<br />
+<table class="table table-striped" style="background-color:#8C8C8C">
     <tr>
         <th>
             @Html.DisplayNameFor(model => model.Nombre)
@@ -47,9 +49,9 @@
             @Html.DisplayFor(modelItem => item.Especialidad)
         </td>
         <td>
-            @Html.ActionLink("Edit", "Edit", new { id=item.Id }) |
-            @Html.ActionLink("Details", "Details", new { id=item.Id }) |
-            @Html.ActionLink("Delete", "Delete", new { id=item.Id })
+            @Html.ActionLink("Editar", "Edit", new { id=item.Id }, new { @class="btn btn-warning"})
+            @Html.ActionLink("Detalles", "Details", new { id=item.Id }, new { @class = "btn btn-warning" })
+            @Html.ActionLink("Eliminar", "Delete", new { id=item.Id }, new { @class = "btn btn-danger" })
         </td>
     </tr>
 }

@@ -1,13 +1,13 @@
 ﻿@model VeterinariaPrueba2.Models.RegistroPersonal
 
 @{
-    ViewBag.Title = "Details";
+    ViewBag.Title = "Detalles del empleado";
 }
 
-<h2>Details</h2>
-
+<h2>Detalles de los datos registrados</h2>
+<br />
 <div>
-    <h4>RegistroPersonal</h4>
+    <h4 style="color:orangered">Datos ingresados de la mascota</h4>
     <hr />
     <dl class="dl-horizontal">
         <dt>
@@ -53,6 +53,14 @@
     </dl>
 </div>
 <p>
-    @Html.ActionLink("Edit", "Edit", new { id = Model.Id }) |
-    @Html.ActionLink("Back to List", "Index")
+    ¿Quieres editar el registro?
+    <div>
+        @Html.ActionLink("Editar", "Edit", new { id = Model.Id }, new { @class = "btn btn-danger" })
+    </div>
+    
+    <br />
+    <div class="btn" style="background-color:cornflowerblue">
+        @Html.ActionLink("Regresar", "Index")
+    </div>
+    
 </p>

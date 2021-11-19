@@ -1,31 +1,70 @@
 ﻿@{
     ViewBag.Title = "Home Page";
 }
-
-<div class="jumbotron">
-    <h1>ASP.NET</h1>
-    <p class="lead">ASP.NET is a free web framework for building great Web sites and Web applications using HTML, CSS and JavaScript.</p>
-    <p><a href="https://asp.net" class="btn btn-primary btn-lg">Learn more &raquo;</a></p>
+<br />
+<div class="jumbotron" style="background-image:url(../../Content/img/fondo1.jpg)">
+    <h1 style="color:black; text-shadow: 1px  0px 0px white,
+               0px  1px 0px white,
+              -1px  0px 0px white,
+               0px -1px 0px white;">Bienvenido a Veterinaria San Julián</h1>
+    <br />
+    <p class="lead" style="color:black; text-shadow: 1px  0px 0px white,
+               0px  1px 0px white,
+              -1px  0px 0px white,
+               0px -1px 0px white;">
+        Veterinaria San Julián tiene a los veterinarios mejor capacitados para diagnosticar y tratar a sus mascotas enfermos y heridos.
+        Ellos le ayudan prevenir enfermedades asociadas a la mala salud de su mascota, darán consejos de como cuidarlos mejor,
+        mediante vacunaciones, medicinas y prestando asesoramiento a sus dueños.
+    </p>
+    <p class="btn btn-success">@Html.ActionLink("Agendar Cita", "Index", "RegistroDueño")</p>
 </div>
-
+<h2 style="text-align:center">Servicios que se prestan</h2>
+<hr />
 <div class="row">
     <div class="col-md-4">
-        <h2>Getting started</h2>
+        <h2 style="color:dodgerblue"><img src="~/Content/img/medicina-preventiva.png" /> Medicina preventiva</h2>
         <p>
-            ASP.NET MVC gives you a powerful, patterns-based way to build dynamic websites that
-            enables a clean separation of concerns and gives you full control over markup
-            for enjoyable, agile development.
+            En la Clínica Veterinaria San Julián contamos con excelentes programas de medicina preventiva como es la aplicación de vacunas para sus mascotas, 
+            de los laboratorios más reconocidos y con los distribuidores  del ramo que se han destacado por el mantenimiento de la cadena 
+            fría para que los biológicos al ser aplicados a su mascota se encuentren en perfectas condiciones.
+            <br />
+            <br />
+            También contamos con el chequeo geriátrico el cual recomendamos para perros de talla miniatura a partir de los 9 años de edad, los perros de 
+            talla media a partir de los 7 años y los de talla gigante como el gran danés o san bernardo a partir de los 6 años, en estos chequeos podemos 
+            detectar enfermedades antes de la presentación de los signos clínicos y comenzar una estrategia para que nuestros amigos tengan una vida más 
+            larga y de mejor calidad
         </p>
         <p><a class="btn btn-default" href="https://go.microsoft.com/fwlink/?LinkId=301865">Learn more &raquo;</a></p>
     </div>
     <div class="col-md-4">
-        <h2>Get more libraries</h2>
-        <p>NuGet is a free Visual Studio extension that makes it easy to add, remove, and update libraries and tools in Visual Studio projects.</p>
-        <p><a class="btn btn-default" href="https://go.microsoft.com/fwlink/?LinkId=301866">Learn more &raquo;</a></p>
+        <h2 style="color:dodgerblue"><img src="~/Content/img/consulta.png"/> Consulta</h2>
+        <p>
+            La Clínica Veterinaria San Julián cuenta con médicos veterinarios expertos en diferentes disciplinas y con la metodología necesaria para 
+            llegar a los diagnósticos que permitirán enfocar los tratamientos de manera eficiente y oportuna, seguimos a detalle el expediente clínico 
+            orientado a problemas, en el que al conjuntar los datos generales, la historia clínica y el examen clínico podemos arrojar la lista de 
+            problemas que nos permitirá agrupar los signos de acuerdo a problemas específicos y recomendar las pruebas de laboratorio e imageniología 
+            complementarias.
+            <br />
+            <br />
+            La parte más importante de un estetoscopio es lo que esta en medio de las olivas.
+        </p>
+        <p><a class="btn btn-default" href="https://go.microsoft.com/fwlink/?LinkId=301866">Agendar Cita &raquo;</a></p>
     </div>
     <div class="col-md-4">
-        <h2>Web Hosting</h2>
-        <p>You can easily find a web hosting company that offers the right mix of features and price for your applications.</p>
+        <h2 style="color:dodgerblue"><img src="~/Content/img/cirugia.png"/> Cirujia y Hospitalización</h2>
+        <p>
+            En la Clínica Veterinaria del Bosque contamos con quirófano equipado con anestesia inhalada y monitores trans quirúrgicos en donde al
+            anestesista se le permite visualizar permanentemente las constantes de las mascotas como son el electrocardiograma, frecuencia respiratoria,
+            cantidad de oxigeno y bióxido de carbono circulante en el organismo de nuestra mascota, entre otras  mientras son intervenidas quirúrgicamente,
+            nuestro quirófano cuenta también con la instrumentación suficiente para la práctica de cirugía en tejidos blandos y ortopedia contando con
+            expertos cirujanos en diferentes disciplinas.
+            <br />
+            <h3 style="color:dodgerblue">Hospitalización</h3>
+            La Clínica Veterinaria del Bosque cuenta con las instalaciones y el personal capacitado para brindar el internamiento de pacientes con fines 
+            tanto terapéuticos como diagnostico en donde se requiere la supervisión e intervención  continua (24 horas). Cuenta con la flexibilidad para 
+            ofrecer  hospitalización diurna en donde los pacientes son internados durante el día para la supervisión y administración de fármacos o 
+            tratamientos mientras los propietarios trabajan.
+        </p>
         <p><a class="btn btn-default" href="https://go.microsoft.com/fwlink/?LinkId=301867">Learn more &raquo;</a></p>
     </div>
 </div>
