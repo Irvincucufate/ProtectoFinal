@@ -126,17 +126,7 @@ namespace VeterinariaPrueba2.Controllers
             db.SaveChanges();
             return RedirectToAction("Index");
         }
-
-        /*public ActionResult Salario(int? id)
-        {
-            if (id == null)
-            {
-                return RedirectToAction("Index");
-            }
-            var registro = db.Registro.Where(e => e.Id == id).Include(e => e.tblDatosHorarios).Include(e => e.tblEmpleados).FirstOrDefault();
-
-            return View(salarioEmpleadito);
-        } */
+        
 
         protected override void Dispose(bool disposing)
         {

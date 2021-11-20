@@ -1,4 +1,6 @@
-﻿@{
+﻿@model IEnumerable<VeterinariaPrueba2.Models.RegistroAnimales>
+
+@{
     ViewBag.Title = "Contact";
 }
 <h2>@ViewBag.Title.</h2>
@@ -15,3 +17,33 @@
     <strong>Support:</strong>   <a href="mailto:Support@example.com">Support@example.com</a><br />
     <strong>Marketing:</strong> <a href="mailto:Marketing@example.com">Marketing@example.com</a>
 </address>
+
+<table class="table table-striped" style="background-color:#8C8C8C">
+    <tr>
+        <th>
+            Nombre del dueño
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.ClaseAnimal)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Raza)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Edad)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Color)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Estatura)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.FechaCita)
+        </th>
+        <th></th>
+    </tr>
+
+    
+
+</table>
